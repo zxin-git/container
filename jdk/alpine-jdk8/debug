@@ -1,0 +1,5 @@
+FROM zxin/alpine-jdk8:slim
+
+RUN apk add --no-cache curl bash busybox tzdata && \
+    rm -rf /etc/localtime && \
+    ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
